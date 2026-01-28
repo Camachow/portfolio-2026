@@ -6,7 +6,7 @@ function Hero() {
   return (
     <header className="hero" id="home">
       <nav className="nav">
-        <div className="nav__brand">Meu Portfólio</div>
+        <div className="nav__brand">&lt;Camacho /&gt;</div>
         <ul className="nav__menu">
           <li>
             <a href="#about">Sobre</a>
