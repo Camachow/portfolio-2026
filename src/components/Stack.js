@@ -1,111 +1,76 @@
-import React from 'react';
+import React from "react";
+import { content } from "../content";
 
-function Stack() {
+function Stack({ language }) {
+  const copy = content[language] || content.pt;
+  const highlights = copy.stack.highlights;
+  const categories = copy.stack.categories;
+
   return (
     <section id="stack" className="section">
       <div className="container">
-        <h2>Minha Stack</h2>
+        <div className="section__heading">
+          <span className="eyebrow">{copy.stack.eyebrow}</span>
+          <h2>{copy.stack.title}</h2>
+          <p>{copy.stack.intro}</p>
+        </div>
+        <div className="stack__intro">
+          <div className="glass card stack__summary">
+            <span className="stack__summary-label">
+              {copy.stack.specialtiesTitle}
+            </span>
+            <ul className="signal-list stack__highlights">
+              {highlights.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="glass card stack__snapshot">
+            <span className="stack__summary-label">
+              {copy.stack.snapshotTitle}
+            </span>
+            <div className="stack__snapshot-grid">
+              {copy.stack.snapshot.map((item) => (
+                <div className="stack__snapshot-item" key={item.label}>
+                  <strong>{item.value}</strong>
+                  <span>{item.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
         <div className="stack__grid">
-          {/* Linguagens */}
-          <div className="glass card stack__item">
-            <h3>Linguagens</h3>
-            <ul className="stack__list">
-              <li>
-                <img src="/icons/javascript.svg" alt="JavaScript" />
-                <span>JavaScript</span>
-              </li>
-              <li>
-                <img src="/icons/typescript.svg" alt="TypeScript" />
-                <span>TypeScript</span>
-              </li>
-              <li>
-                <img src="/icons/python.svg" alt="Python" />
-                <span>Python</span>
-              </li>
-              <li>
-                <img src="/icons/c.svg" alt="C" />
-                <span>C</span>
-              </li>
-              <li>
-                <img src="/icons/cplusplus.svg" alt="C++" />
-                <span>C++</span>
-              </li>
-            </ul>
-          </div>
-          {/* Frameworks */}
-          <div className="glass card stack__item">
-            <h3>Frameworks &amp; Bibliotecas</h3>
-            <ul className="stack__list">
-              <li>
-                <img src="/icons/react.svg" alt="ReactJS" />
-                <span>ReactJS</span>
-              </li>
-              <li>
-                <img src="/icons/react.svg" alt="React Native" />
-                <span>React Native</span>
-              </li>
-              <li>
-                <img src="/icons/nestjs.svg" alt="NestJS" />
-                <span>NestJS</span>
-              </li>
-              <li>
-                <img src="/icons/express.svg" alt="Express.js" />
-                <span>Express.js</span>
-              </li>
-              <li>
-                <img src="/icons/nodejs.svg" alt="Node.js" />
-                <span>Node.js</span>
-              </li>
-            </ul>
-          </div>
-          {/* Bancos de Dados */}
-          <div className="glass card stack__item">
-            <h3>Bancos de Dados</h3>
-            <ul className="stack__list">
-              <li>
-                <img src="/icons/postgresql.svg" alt="PostgreSQL" />
-                <span>PostgreSQL</span>
-              </li>
-              <li>
-                <img src="/icons/mysql.svg" alt="MySQL" />
-                <span>MySQL</span>
-              </li>
-              <li>
-                <img src="/icons/mongodb.svg" alt="MongoDB" />
-                <span>MongoDB</span>
-              </li>
-            </ul>
-          </div>
-          {/* Ferramentas */}
-          <div className="glass card stack__item">
-            <h3>Ferramentas &amp; Outros</h3>
-            <ul className="stack__list">
-              <li>
-                <img src="/icons/git.svg" alt="Git" />
-                <span>Git</span>
-              </li>
-              <li>
-                <img src="/icons/github.svg" alt="GitHub" />
-                <span>GitHub</span>
-              </li>
-              <li>
-                <img src="/icons/npm.svg" alt="npm" />
-                <span>npm</span>
-              </li>
-              <li>
-                <img src="/icons/figma.svg" alt="Figma" />
-                <span>Figma</span>
-              </li>
-              <li>
-                <img src="/icons/docker.svg" alt="Docker" />
-                <span>Docker</span>
-              </li>
-              <li>
-                <img src="/icons/dbeaver.svg" alt="DBeaver" />
-                <span>DBeaver</span>
-              </li>
-            </ul>
-          </div>
+          {categories.map((category) => (
+            <div
+              className="glass card stack__item"
+              key={category.title}
+              style={{ "--stack-accent": category.accent }}
+            >
+              <div className="stack__item-glow" aria-hidden="true" />
+              <div className="stack__item-header">
+                <div className="stack__item-heading">
+                  <span className="stack__item-tag">{category.tag}</span>
+                  <h3>{category.title}</h3>
+                </div>
+                <div className="stack__item-meta">
+                  <strong>{category.items.length}</strong>
+                  <span>{copy.stack.technologiesLabel}</span>
+                </div>
+              </div>
+              <span className="stack__item-focus">{category.focus}</span>
+              <p className="stack__item-description">{category.description}</p>
+              <ul className="stack__list">
+                {category.items.map(([icon, label]) => (
+                  <li key={label}>
+                    <div className="stack__icon-wrap">
+                      <img src={`/icons/${icon}.svg`} alt={label} />
+                    </div>
+                    <span className="stack__item-label">{label}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </section>

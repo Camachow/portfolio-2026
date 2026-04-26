@@ -1,24 +1,31 @@
-import React from 'react';
+import React from "react";
+import { content } from "../content";
 
-function About() {
+function About({ language }) {
+  const copy = content[language] || content.pt;
+  const highlights = copy.about.highlights;
+
   return (
     <section id="about" className="section">
       <div className="container">
-        <h2>Sobre</h2>
-        <div className="glass card">
-          <p>
-            Desde pequeno sou apaixonado pelo mundo da tecnologia e por tudo o
-            que ela pode proporcionar. Adoro aprender sobre o que há de novo no
-            mercado e aplicar esse conhecimento no meu dia a dia. Busco sempre
-            utilizar as melhores ferramentas para criar produtos e serviços
-            escaláveis, usando tecnologias de ponta, padrões de design e
-            soluções distribuídas.
-          </p>
-          <p>
-            Atualmente sou graduando em Engenharia de Sistemas pela UFMG, onde
-            desenvolvi uma base sólida em estruturas de dados, lógica
-            computacional, algoritmos e engenharia de software.
-          </p>
+        <div className="section__heading">
+          <span className="eyebrow">{copy.about.eyebrow}</span>
+          <h2>{copy.about.title}</h2>
+          <p>{copy.about.intro}</p>
+        </div>
+        <div className="about__grid">
+          <div className="glass card about__story">
+            <p>{copy.about.storyOne}</p>
+            <p>{copy.about.storyTwo}</p>
+          </div>
+          <div className="glass card about__panel">
+            <span className="about__panel-title">{copy.about.panelTitle}</span>
+            <ul className="signal-list">
+              {highlights.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>

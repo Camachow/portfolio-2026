@@ -1,42 +1,25 @@
 import React, { useState } from "react";
+import { content } from "../content";
 
-function Projects() {
+function Projects({ language }) {
   const [activeProject, setActiveProject] = useState(null);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
-
-  const projects = [
-    {
-      title: "Aplicativo Nandes Neuroscience & Basketball",
-      description:
-        "Aplicativo móvel desenvolvido em React Native que permite acompanhar treinamentos e métricas de desempenho de atletas. Colaborei com designers e stakeholders, garantindo uma experiência fluida e responsiva.",
-      modalText:
-        "O app centraliza planos de treino, métricas e relatórios em um fluxo simples para atletas e treinadores. Meu foco foi entregar telas responsivas, integrações estáveis e uma navegação clara para o acompanhamento diário.",
-      images: [
-        "/images/projects/neurobasket/logo.png",
-        "/images/projects/neurobasket/login.png",
-        "/images/projects/neurobasket/court.png",
-      ],
-      projectUrl: "#",
-    },
-    {
-      title: "Sistema de Gestão de Aprendizagem (LMS)",
-      description:
-        "Sistema web completo para gerenciamento de cursos e alunos, desenvolvido com React, Nest.js e SQL. Projeto realizado na Pec Tec, com foco em escalabilidade e soluções baseadas em banco de dados.",
-      modalText:
-        "Plataforma LMS com dashboards administrativos, matrículas e trilhas de conteúdo. Trabalhei no front-end e na integração com a API para garantir performance, segurança e escalabilidade.",
-      images: ["/images/foto-perfil.png", "/images/foto-perfil.png"],
-      projectUrl: "#",
-    },
-    {
-      title: "Contribuições OpenEdx",
-      description:
-        "Participação em projeto open‑source, aprimorando funcionalidades da plataforma de educação à distância OpenEdx. Incluiu desenvolvimento de novos módulos e correções de bugs em colaboração com a comunidade.",
-      modalText:
-        "Contribuições em módulos e correções no core do OpenEdx, com foco em usabilidade e estabilidade. O trabalho envolveu revisão de PRs e alinhamento com a comunidade.",
-      images: ["/images/foto-perfil.png"],
-      projectUrl: "https://openedx.org",
-    },
-  ];
+  const [activeFilter, setActiveFilter] = useState("all");
+  const copy = content[language] || content.pt;
+  const baseProjects = content.pt.projects.projects;
+  const projects = copy.projects.projects.map((project, index) => ({
+    ...project,
+    images: baseProjects[index]?.images || project.images,
+  }));
+  const categories = [...new Set(projects.map((project) => project.category))];
+  const filteredProjects =
+    activeFilter === "all"
+      ? projects
+      : projects.filter((project) => project.category === activeFilter);
+  const featuredProject = filteredProjects[0] || projects[0];
+  const remainingProjects = filteredProjects.filter(
+    (project) => project.title !== featuredProject?.title,
+  );
 
   const handleOpen = (project) => {
     setActiveProject(project);
@@ -67,21 +50,116 @@ function Projects() {
   return (
     <section id="projects" className="section">
       <div className="container">
-        <h2>Meus Projetos</h2>
+        <div className="section__heading">
+          <span className="eyebrow">{copy.projects.eyebrow}</span>
+          <h2>{copy.projects.title}</h2>
+          <p>{copy.projects.intro}</p>
+        </div>
+
+        <div className="projects__highlights">
+          {copy.projects.highlights.map((item) => (
+            <div className="projects__highlight" key={item.label}>
+              <strong>{item.value}</strong>
+              <span>{item.label}</span>
+            </div>
+          ))}
+        </div>
+
+        <div
+          className="projects__filters"
+          aria-label={copy.projects.filtersLabel}
+        >
+          <button
+            type="button"
+            className={`projects__filter${activeFilter === "all" ? " is-active" : ""}`}
+            onClick={() => setActiveFilter("all")}
+          >
+            {copy.projects.allFilter}
+          </button>
+          {categories.map((category) => (
+            <button
+              key={category}
+              type="button"
+              className={`projects__filter${
+                activeFilter === category ? " is-active" : ""
+              }`}
+              onClick={() => setActiveFilter(category)}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
+        {featuredProject && (
+          <article className="glass card project project--featured">
+            <div className="project__media-wrap">
+              <div className="project__image" aria-hidden="true">
+                <img src={featuredProject.images[0]} alt="" loading="lazy" />
+              </div>
+            </div>
+            <div className="project__content-wrap">
+              <span className="project__kicker">
+                {copy.projects.featuredLabel}
+              </span>
+              <span className="project__tag">{featuredProject.category}</span>
+              <h3>{featuredProject.title}</h3>
+              <p className="project__quote">"{featuredProject.quote}"</p>
+              <p>{featuredProject.description}</p>
+              <div className="project__meta-grid">
+                <div>
+                  <span>{copy.projects.impactLabel}</span>
+                  <strong>{featuredProject.impact}</strong>
+                </div>
+                <div>
+                  <span>{copy.projects.statusLabel}</span>
+                  <strong>{featuredProject.status}</strong>
+                </div>
+                <div>
+                  <span>{copy.projects.periodLabel}</span>
+                  <strong>{featuredProject.period}</strong>
+                </div>
+              </div>
+              <div className="project__actions">
+                <button
+                  type="button"
+                  className="btn btn--small"
+                  onClick={() => handleOpen(featuredProject)}
+                >
+                  {copy.projects.viewMore}
+                </button>
+                <a
+                  href={featuredProject.projectUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn--ghost btn--small"
+                >
+                  {copy.projects.visitProject}
+                </a>
+              </div>
+            </div>
+          </article>
+        )}
+
         <div className="projects__grid">
-          {projects.map((project) => (
+          {remainingProjects.map((project) => (
             <div className="glass card project" key={project.title}>
               <div className="project__image" aria-hidden="true">
                 <img src={project.images[0]} alt="" loading="lazy" />
               </div>
+              <div className="project__inline-meta">
+                <span className="project__tag">{project.category}</span>
+                <span className="project__period">{project.period}</span>
+              </div>
               <h3>{project.title}</h3>
+              <p className="project__quote">"{project.quote}"</p>
               <p>{project.description}</p>
+              <p className="project__impact">{project.impact}</p>
               <button
                 type="button"
                 className="btn btn--small"
                 onClick={() => handleOpen(project)}
               >
-                Ver mais
+                {copy.projects.viewMore}
               </button>
             </div>
           ))}
@@ -95,14 +173,14 @@ function Projects() {
               type="button"
               className="modal__close"
               onClick={handleClose}
-              aria-label="Fechar"
+              aria-label={copy.projects.closeLabel}
             >
               ×
             </button>
             <div className="modal__media">
               <img
                 src={activeProject.images[activeImageIndex]}
-                alt={`Imagem do projeto ${activeProject.title}`}
+                alt={`${copy.projects.imageAltPrefix} ${activeProject.title}`}
               />
               {activeProject.images.length > 1 && (
                 <>
@@ -110,7 +188,7 @@ function Projects() {
                     type="button"
                     className="carousel__control carousel__control--prev"
                     onClick={handlePrevImage}
-                    aria-label="Imagem anterior"
+                    aria-label={copy.projects.prevImage}
                   >
                     ‹
                   </button>
@@ -118,13 +196,13 @@ function Projects() {
                     type="button"
                     className="carousel__control carousel__control--next"
                     onClick={handleNextImage}
-                    aria-label="Próxima imagem"
+                    aria-label={copy.projects.nextImage}
                   >
                     ›
                   </button>
                   <div
                     className="carousel__dots"
-                    aria-label="Selecionar imagem"
+                    aria-label={copy.projects.selectImage}
                   >
                     {activeProject.images.map((_, index) => (
                       <button
@@ -134,7 +212,7 @@ function Projects() {
                           index === activeImageIndex ? " is-active" : ""
                         }`}
                         onClick={() => handleSelectImage(index)}
-                        aria-label={`Ir para imagem ${index + 1}`}
+                        aria-label={`${copy.projects.goToImage} ${index + 1}`}
                         aria-pressed={index === activeImageIndex}
                       />
                     ))}
@@ -143,6 +221,7 @@ function Projects() {
               )}
             </div>
             <div className="modal__body">
+              <span className="project__tag">{activeProject.category}</span>
               <h3>{activeProject.title}</h3>
               <p>{activeProject.modalText}</p>
               <a
@@ -151,7 +230,7 @@ function Projects() {
                 rel="noreferrer"
                 className="btn"
               >
-                Acessar projeto
+                {copy.projects.visitProject}
               </a>
             </div>
           </div>
