@@ -12,7 +12,12 @@ function Hero({ language, onLanguageChange }) {
       <div className="hero__orb hero__orb--one" aria-hidden="true" />
       <div className="hero__orb hero__orb--two" aria-hidden="true" />
       <nav className="nav">
-        <div className="nav__brand">&lt;Camacho /&gt;</div>
+        <div className="nav__brand">
+          <span className="nav__brand-icon" aria-hidden="true">
+            {"</>"}
+          </span>
+          <span>&lt;Camacho /&gt;</span>
+        </div>
         <div className="nav__actions">
           <ul className="nav__menu">
             <li>
