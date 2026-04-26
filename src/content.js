@@ -279,16 +279,14 @@ export const content = {
     },
   },
   en: {
-    title: "AX37 Marketing Events",
-    category: "Landing Page",
-    quote: "From briefing to delivery, events with presence and impact.",
-    impact: "500+ events delivered and 10+ years of experience",
-    status: "Live",
-    contact: "Contact",
-    description:
-      "Institutional landing page for a company focused on event marketing, event setup, exhibitions, and corporate experiences. The project organizes services, products, and contact calls to action to improve conversion and clarify the brand offer.",
-    modalText:
-      "The page positions AX37 around authority and conversion, grouping content into hero, services, products, and quick contact via WhatsApp, email, and quote requests. The site showcases event formats such as promotional blitzes, corporate events, seminars, symposiums, fairs, roadshows, workshops, congresses, training programs, business conventions, online events, and hybrid events. On the product side, it highlights access portals and facades, stands, kiosks, parklet decks, meeting points, instagrammable scenes, custom containers, outdoor media, POS displays, event furniture, promotional materials, and complete event solutions.",
+    nav: {
+      about: "About",
+      stack: "Stack",
+      projects: "Projects",
+      experience: "Experience",
+      contact: "Contact",
+      languageLabel: "Select language",
+    },
     hero: {
       status: "Available for new projects",
       eyebrow: "Software Engineer • Frontend • Backend",
