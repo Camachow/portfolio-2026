@@ -130,6 +130,9 @@ export const content = {
       impactLabel: "Impacto",
       statusLabel: "Status",
       periodLabel: "Ano",
+      liveTag: "No ar",
+      developmentTag: "Em desenvolvimento",
+      openSourceTag: "Colaboração open source",
       highlights: [
         { value: "5", label: "cases principais" },
         { value: "2", label: "produtos em produção" },
@@ -137,6 +140,7 @@ export const content = {
       ],
       viewMore: "Ver mais",
       visitProject: "Acessar site",
+      viewRepository: "Ver no GitHub",
       closeLabel: "Fechar",
       prevImage: "Imagem anterior",
       nextImage: "Proxima imagem",
@@ -149,7 +153,7 @@ export const content = {
           category: "Mobile Product",
           quote: "Experiência de treino orientada por dados, sem atrito.",
           impact: "Uso recorrente por atletas e comissão técnica",
-          status: "No ar (Android)",
+          status: "Em desenvolvimento",
           period: "2023-atual",
           description:
             "Aplicativo móvel desenvolvido em React Native que permite acompanhar treinamentos e métricas de desempenho de atletas. Colaborei com designers e stakeholders, garantindo uma experiência fluida e responsiva.",
@@ -161,6 +165,7 @@ export const content = {
             "/images/projects/neurobasket/court.png",
           ],
           projectUrl: "#",
+          featured: true,
         },
         {
           title: "Sistema de Gestao de Aprendizagem (LMS)",
@@ -182,7 +187,7 @@ export const content = {
           quote: "Melhorias pontuais que elevam estabilidade e usabilidade.",
           impact: "Melhorias incorporadas em releases da comunidade",
           status: "Contribuidor ativo",
-          period: "2023-2026",
+          period: "2024",
           description:
             "Participação em projeto open-source, aprimorando funcionalidades da plataforma de educação a distância OpenEdx. Incluiu desenvolvimento de novos módulos, correções de bugs em colaboração com a comunidade e atualização de pacotes de tradução",
           modalText:
@@ -191,6 +196,7 @@ export const content = {
             "https://openedx.org/wp-content/uploads/2025/08/openedx-logo-2026.svg",
           ],
           projectUrl: "https://openedx.org",
+          githubUrl: "https://github.com/openedx",
         },
         {
           title: "Organo",
@@ -427,6 +433,9 @@ export const content = {
       impactLabel: "Impact",
       statusLabel: "Status",
       periodLabel: "Year",
+      liveTag: "Live",
+      developmentTag: "In development",
+      openSourceTag: "Open source contribution",
       highlights: [
         { value: "5", label: "main case studies" },
         { value: "2", label: "products in production" },
@@ -458,6 +467,7 @@ export const content = {
             "/images/projects/neurobasket/court.png",
           ],
           projectUrl: "#",
+          featured: true,
         },
         {
           title: "Learning Management System (LMS)",

@@ -11,12 +11,55 @@ function Projects({ language }) {
     ...project,
     images: baseProjects[index]?.images || project.images,
   }));
+  const getStatusTag = (status) => {
+    const normalizedStatus = (status || "").toLowerCase();
+    if (
+      normalizedStatus.includes("no ar") ||
+      normalizedStatus.includes("live")
+    ) {
+      return copy.projects.liveTag;
+    }
+
+    if (
+      normalizedStatus.includes("contribuidor") ||
+      normalizedStatus.includes("contributions") ||
+      normalizedStatus.includes("open source") ||
+      normalizedStatus.includes("opensource")
+    ) {
+      return copy.projects.openSourceTag;
+    }
+
+    return copy.projects.developmentTag;
+  };
+  const getStatusClass = (status) => {
+    const normalizedStatus = (status || "").toLowerCase();
+    if (
+      normalizedStatus.includes("no ar") ||
+      normalizedStatus.includes("live")
+    ) {
+      return "project__status-tag project__status-tag--live";
+    }
+
+    if (
+      normalizedStatus.includes("contribuidor") ||
+      normalizedStatus.includes("contributions") ||
+      normalizedStatus.includes("open source") ||
+      normalizedStatus.includes("opensource")
+    ) {
+      return "project__status-tag project__status-tag--opensource";
+    }
+
+    return "project__status-tag project__status-tag--development";
+  };
   const categories = [...new Set(projects.map((project) => project.category))];
   const filteredProjects =
     activeFilter === "all"
       ? projects
       : projects.filter((project) => project.category === activeFilter);
-  const featuredProject = filteredProjects[0] || projects[0];
+  const featuredProject =
+    filteredProjects.find((p) => p.featured) ||
+    filteredProjects[0] ||
+    projects[0];
   const remainingProjects = filteredProjects.filter(
     (project) => project.title !== featuredProject?.title,
   );
@@ -98,13 +141,20 @@ function Projects({ language }) {
               </div>
             </div>
             <div className="project__content-wrap">
-              <span className="project__kicker">
-                {copy.projects.featuredLabel}
-              </span>
+              <div className="project__featured-header">
+                <span className="project__kicker">
+                  {copy.projects.featuredLabel}
+                </span>
+                <span className={getStatusClass(featuredProject.status)}>
+                  {getStatusTag(featuredProject.status)}
+                </span>
+              </div>
               <span className="project__tag">{featuredProject.category}</span>
               <h3>{featuredProject.title}</h3>
               <p className="project__quote">"{featuredProject.quote}"</p>
-              <p>{featuredProject.description}</p>
+              <p className="project__description">
+                {featuredProject.description}
+              </p>
               <div className="project__meta-grid">
                 <div>
                   <span>{copy.projects.impactLabel}</span>
@@ -127,14 +177,6 @@ function Projects({ language }) {
                 >
                   {copy.projects.viewMore}
                 </button>
-                <a
-                  href={featuredProject.projectUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn btn--ghost btn--small"
-                >
-                  {copy.projects.visitProject}
-                </a>
               </div>
             </div>
           </article>
@@ -143,6 +185,9 @@ function Projects({ language }) {
         <div className="projects__grid">
           {remainingProjects.map((project) => (
             <div className="glass card project" key={project.title}>
+              <span className={getStatusClass(project.status)}>
+                {getStatusTag(project.status)}
+              </span>
               <div className="project__image" aria-hidden="true">
                 <img src={project.images[0]} alt="" loading="lazy" />
               </div>
@@ -152,15 +197,17 @@ function Projects({ language }) {
               </div>
               <h3>{project.title}</h3>
               <p className="project__quote">"{project.quote}"</p>
-              <p>{project.description}</p>
+              <p className="project__description">{project.description}</p>
               <p className="project__impact">{project.impact}</p>
-              <button
-                type="button"
-                className="btn btn--small"
-                onClick={() => handleOpen(project)}
-              >
-                {copy.projects.viewMore}
-              </button>
+              <div className="project__actions">
+                <button
+                  type="button"
+                  className="btn btn--small"
+                  onClick={() => handleOpen(project)}
+                >
+                  {copy.projects.viewMore}
+                </button>
+              </div>
             </div>
           ))}
         </div>
@@ -224,14 +271,29 @@ function Projects({ language }) {
               <span className="project__tag">{activeProject.category}</span>
               <h3>{activeProject.title}</h3>
               <p>{activeProject.modalText}</p>
-              <a
-                href={activeProject.projectUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="btn"
-              >
-                {copy.projects.visitProject}
-              </a>
+              <div style={{ display: "flex", gap: "0.8rem", flexWrap: "wrap" }}>
+                {activeProject.projectUrl &&
+                  activeProject.projectUrl !== "#" && (
+                    <a
+                      href={activeProject.projectUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn"
+                    >
+                      {copy.projects.visitProject}
+                    </a>
+                  )}
+                {activeProject.githubUrl && (
+                  <a
+                    href={activeProject.githubUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn"
+                  >
+                    {copy.projects.viewRepository}
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         </div>
