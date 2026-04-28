@@ -4,55 +4,55 @@ export const content = {
       about: "Sobre",
       stack: "Stack",
       projects: "Projetos",
-      experience: "Experiencia",
+      experience: "Experiência",
       contact: "Contato",
       languageLabel: "Selecionar idioma",
     },
     hero: {
-      status: "Disponivel para novos projetos",
+      status: "Disponível para novos projetos",
       eyebrow: "Software Engineer • Frontend • Backend",
       title:
-        "Crio experiencias digitais com linguagem visual de produto e engenharia solida.",
-      lead: "Sou Rafael Camacho, desenvolvedor full-stack com foco em interfaces marcantes, aplicacoes escalaveis e integracoes confiaveis para web e mobile.",
+        "Crio experiências digitais com linguagem visual de produto e engenharia sólida.",
+      lead: "Sou Rafael Camacho, desenvolvedor full-stack com foco em interfaces marcantes, aplicações escaláveis e integrações confiáveis para web e mobile.",
       ctaProjects: "Ver projetos",
       ctaContact: "Falar comigo",
       profileAlt: "Rafael Camacho",
       metrics: [
         { value: "+3", label: "anos construindo software" },
-        { value: "Full-Stack", label: "web, mobile e integracoes" },
+        { value: "Full-Stack", label: "web, mobile e integrações" },
         { value: "UFMG", label: "Engenharia de Sistemas" },
       ],
     },
     about: {
       eyebrow: "Sobre mim",
-      title: "Visao de engenharia com acabamento de produto.",
+      title: "Visão de engenharia com acabamento de produto.",
       intro:
-        "Minha motivacao e transformar problemas complexos em experiencias claras, rapidas e uteis, sem abrir mao de arquitetura, manutencao e qualidade de codigo.",
+        "Minha motivação é transformar problemas complexos em experiências claras, rápidas e úteis, sem abrir mão de arquitetura, manutenção e qualidade de código.",
       storyOne:
-        "Desde cedo sou movido por tecnologia e pela forma como software bem construido muda rotinas, negocios e decisoes. Gosto de unir implementacao pratica, visao sistemica e senso estetico para entregar produtos mais robustos e memoraveis.",
+        "Desde cedo sou movido por tecnologia e pela forma como software bem construído muda rotinas, negócios e decisões. Gosto de unir implementação prática, visão sistêmica e senso estético para entregar produtos mais robustos e memoráveis.",
       storyTwo:
-        "Hoje curso Engenharia de Sistemas na UFMG, onde aprofundei minha base em algoritmos, estruturas de dados, logica computacional e engenharia de software. Isso complementa meu trabalho com aplicacoes web, mobile e fluxos integrados no mercado.",
+        "Hoje curso Engenharia de Sistemas na UFMG, onde aprofundei minha base em algoritmos, estruturas de dados, lógica computacional e engenharia de software. Isso complementa meu trabalho com aplicações web, mobile e fluxos integrados no mercado.",
       panelTitle: "Foco atual",
       highlights: [
-        "Arquitetura de aplicacoes orientadas a escala",
+        "Arquitetura de aplicações orientadas à escala",
         "Interfaces com foco em performance e clareza",
-        "Integracoes, automacoes e produtos digitais completos",
+        "Integrações, automações e produtos digitais completos",
       ],
     },
     stack: {
       eyebrow: "Stack",
       title: "Tecnologias que uso para construir produtos de ponta a ponta.",
       intro:
-        "Combino front-end, back-end, dados e ferramentas de entrega para desenvolver produtos com velocidade e consistencia.",
+        "Combino front-end, back-end, dados e ferramentas de entrega para desenvolver produtos com velocidade e consistência.",
       specialtiesTitle: "Especialidades",
       snapshotTitle: "Snapshot",
       highlights: [
         "Front-end responsivo com foco em UX e performance",
-        "Back-end e APIs para produtos escalaveis",
-        "Modelagem de dados e integracoes entre sistemas",
+        "Back-end e APIs para produtos escaláveis",
+        "Modelagem de dados e integrações entre sistemas",
       ],
       snapshot: [
-        { value: "4", label: "camadas de atuacao" },
+        { value: "4", label: "camadas de atuação" },
         { value: "15+", label: "tecnologias recorrentes" },
         { value: "Web + Mobile", label: "entrega full-stack" },
       ],
@@ -64,7 +64,7 @@ export const content = {
           accent: "#61dafb",
           focus: "Sintaxe, performance e tipagem",
           description:
-            "Ferramentas centrais para logica, tipagem, automacao e construcao de aplicacoes.",
+            "Ferramentas centrais para lógica, tipagem, automação e construção de aplicações.",
           items: [
             ["javascript", "JavaScript"],
             ["typescript", "TypeScript"],
@@ -79,7 +79,7 @@ export const content = {
           accent: "#77f7c0",
           focus: "UI, mobile e APIs modernas",
           description:
-            "Ecossistema principal para interfaces, aplicacoes server-side e experiencias mobile.",
+            "Ecossistema principal para interfaces, aplicações server-side e experiências mobile.",
           items: [
             ["react", "ReactJS"],
             ["react", "React Native"],
@@ -92,9 +92,9 @@ export const content = {
           title: "Banco de Dados",
           tag: "Dados",
           accent: "#8a7dff",
-          focus: "Persistencia e modelagem",
+          focus: "Persistência e modelagem",
           description:
-            "Tecnologias usadas para persistencia, consulta e estruturacao de informacao.",
+            "Tecnologias usadas para persistência, consulta e estruturação de informação.",
           items: [
             ["postgresql", "PostgreSQL"],
             ["mysql", "MySQL"],
@@ -105,7 +105,7 @@ export const content = {
           title: "Ferramentas",
           tag: "Workflow",
           accent: "#ffb86b",
-          focus: "Fluxo, deploy e colaboracao",
+          focus: "Fluxo, deploy e colaboração",
           description:
             "Ferramentas que sustentam versionamento, design, empacotamento e produtividade.",
           items: [
@@ -121,9 +121,9 @@ export const content = {
     },
     projects: {
       eyebrow: "Projetos",
-      title: "Trabalhos que demonstram produto, escala e execucao tecnica.",
+      title: "Trabalhos que demonstram produto, escala e execução técnica.",
       intro:
-        "Selecionei projetos que refletem minha atuacao em mobile, plataformas web e colaboracao com times de produto e engenharia.",
+        "Selecionei projetos que refletem minha atuação em mobile, plataformas web e colaboração com times de produto e engenharia.",
       featuredLabel: "Projeto em destaque",
       filtersLabel: "Categorias",
       allFilter: "Todos",
@@ -132,7 +132,7 @@ export const content = {
       periodLabel: "Ano",
       highlights: [
         { value: "3", label: "cases principais" },
-        { value: "2", label: "produtos em producao" },
+        { value: "2", label: "produtos em produção" },
         { value: "1", label: "projeto open source ativo" },
       ],
       viewMore: "Ver mais",
@@ -147,14 +147,14 @@ export const content = {
         {
           title: "Aplicativo Nandes Neuroscience & Basketball",
           category: "Mobile Product",
-          quote: "Experiencia de treino orientada por dados, sem atrito.",
-          impact: "Uso recorrente por atletas e comissao tecnica",
+          quote: "Experiência de treino orientada por dados, sem atrito.",
+          impact: "Uso recorrente por atletas e comissão técnica",
           status: "No ar (Android)",
           period: "2023-atual",
           description:
-            "Aplicativo movel desenvolvido em React Native que permite acompanhar treinamentos e metricas de desempenho de atletas. Colaborei com designers e stakeholders, garantindo uma experiencia fluida e responsiva.",
+            "Aplicativo móvel desenvolvido em React Native que permite acompanhar treinamentos e métricas de desempenho de atletas. Colaborei com designers e stakeholders, garantindo uma experiência fluida e responsiva.",
           modalText:
-            "O app centraliza planos de treino, metricas e relatorios em um fluxo simples para atletas e treinadores. Meu foco foi entregar telas responsivas, integracoes estaveis e uma navegacao clara para o acompanhamento diario.",
+            "O app centraliza planos de treino, métricas e relatórios em um fluxo simples para atletas e treinadores. Meu foco foi entregar telas responsivas, integrações estáveis e uma navegação clara para o acompanhamento diário.",
           images: [
             "https://www.nandes.com.br/assets/logo2-SqGl37HI.png",
             "/images/projects/neurobasket/login.png",
@@ -166,13 +166,13 @@ export const content = {
           title: "Sistema de Gestao de Aprendizagem (LMS)",
           category: "SaaS Platform",
           quote: "Arquitetura de ensino digital preparada para escala.",
-          impact: "Plataforma utilizada em rotinas academicas reais",
+          impact: "Plataforma utilizada em rotinas acadêmicas reais",
           status: "No ar",
           period: "2024-2025",
           description:
-            "Sistema web completo para gerenciamento de cursos e alunos, desenvolvido com React, Nest.js e SQL. Projeto realizado na Pec Tec, com foco em escalabilidade e solucoes baseadas em banco de dados.",
+            "Sistema web completo para gerenciamento de cursos e alunos, desenvolvido com React, Nest.js e SQL. Projeto realizado na Pec Tec, com foco em escalabilidade e soluções baseadas em banco de dados.",
           modalText:
-            "Plataforma LMS com dashboards administrativos, matriculas e trilhas de conteudo. Trabalhei no front-end e na integracao com a API para garantir performance, seguranca e escalabilidade.",
+            "Plataforma LMS com dashboards administrativos, matrículas e trilhas de conteúdo. Trabalhei no front-end e na integração com a API para garantir performance, segurança e escalabilidade.",
           images: ["/images/projects/lms-projeto-desenvolve/login-screen.png"],
           projectUrl: "https://projetodesenvolve.online",
         },
@@ -184,9 +184,9 @@ export const content = {
           status: "Contribuidor ativo",
           period: "2023-2026",
           description:
-            "Participacao em projeto open-source, aprimorando funcionalidades da plataforma de educacao a distancia OpenEdx. Incluiu desenvolvimento de novos modulos, correcoes de bugs em colaboracao com a comunidade e atualização de pacotes de tradução",
+            "Participação em projeto open-source, aprimorando funcionalidades da plataforma de educação a distância OpenEdx. Incluiu desenvolvimento de novos módulos, correções de bugs em colaboração com a comunidade e atualização de pacotes de tradução",
           modalText:
-            "Contribuicoes em modulos e correcoes no core do OpenEdx, com foco em usabilidade e estabilidade. O trabalho envolveu alinhamento com a comunidade e atualização de pacotes de tradução para português.",
+            "Contribuições em módulos e correções no core do OpenEdx, com foco em usabilidade e estabilidade. O trabalho envolveu alinhamento com a comunidade e atualização de pacotes de tradução para português.",
           images: [
             "https://openedx.org/wp-content/uploads/2025/08/openedx-logo-2026.svg",
           ],
@@ -209,49 +209,49 @@ export const content = {
       ],
     },
     experience: {
-      eyebrow: "Experiencia",
+      eyebrow: "Experiência",
       title:
-        "Evolucao consistente em produtos, times e responsabilidade tecnica.",
+        "Evolução consistente em produtos, times e responsabilidade técnica.",
       intro:
-        "Minha trajetoria combina entrega pratica, colaboracao com times multidisciplinares e crescimento continuo em arquitetura e produto.",
+        "Minha trajetória combina entrega prática, colaboração com times multidisciplinares e crescimento contínuo em arquitetura e produto.",
       experiences: [
         {
           title: "LEVTY - Engenheiro de Software",
           period: "Mai 2025 - Presente",
           description:
-            "Atuacao no desenvolvimento de processos BPMN utilizando ferramentas de modelagem. Programacao e automacao de fluxos de trabalho em JavaScript, com foco na integracao entre sistemas e otimizacao de processos. Participacao em cerimonias ageis (Scrum) e uso de praticas como Kanban para gestao de tarefas. Colaboracao em modelagem de sistemas, levantamento de requisitos, testes funcionais e decisoes arquiteturais para solucoes escalaveis.",
+            "Atuação no desenvolvimento de processos BPMN utilizando ferramentas de modelagem. Programação e automação de fluxos de trabalho em JavaScript, com foco na integração entre sistemas e otimização de processos. Participação em cerimônias ágeis (Scrum) e uso de práticas como Kanban para gestão de tarefas. Colaboração em modelagem de sistemas, levantamento de requisitos, testes funcionais e decisões arquiteturais para soluções escaláveis.",
         },
         {
-          title: "Pec Tec - Desenvolvedor Full-Stack Junior",
+          title: "Pec Tec - Desenvolvedor Full-Stack Júnior",
           period: "Abr 2024 - Abr 2025",
           description:
-            "Desenvolvimento e implantacao de aplicacoes web completas usando React, Nest.js, TypeScript, Node.js e SQL. Colaboracao em projetos de sistemas de gerenciamento de aprendizagem (LMS) e CRM, com foco em arquitetura escalavel e solucoes baseadas em banco de dados. Contribuicoes para o projeto open-source OpenEdx e participacao ativa em equipes ageis, assumindo papeis de lideranca.",
+            "Desenvolvimento e implantação de aplicações web completas usando React, Nest.js, TypeScript, Node.js e SQL. Colaboração em projetos de sistemas de gerenciamento de aprendizagem (LMS) e CRM, com foco em arquitetura escalável e soluções baseadas em banco de dados. Contribuições para o projeto open-source OpenEdx e participação ativa em equipes ágeis, assumindo papéis de liderança.",
         },
         {
-          title: "Projeto Desenvolve - Estagiario em Desenvolvimento",
+          title: "Projeto Desenvolve - Estagiário em Desenvolvimento",
           period: "Nov 2023 - Mar 2024",
           description:
-            "Acompanhamento de alunos e realizacao de monitorias para tirar duvidas. Participacao em projetos internos com responsabilidade pelo desenvolvimento front-end. Desenvolvimento da nova plataforma de estudos da empresa e colaboracao na manutencao de diversos projetos.",
+            "Acompanhamento de alunos e realização de monitorias para tirar dúvidas. Participação em projetos internos com responsabilidade pelo desenvolvimento front-end. Desenvolvimento da nova plataforma de estudos da empresa e colaboração na manutenção de diversos projetos.",
         },
         {
           title: "Nandes Neuroscience & Basketball - Dev. Full-Stack Mobile",
           period: "Jan 2023 - Presente",
           description:
-            "Desenvolvimento de aplicativo movel com React Native CLI para Android (versao iOS em fase final). Colaboracao com designers e stakeholders para traduzir requisitos de negocio em funcionalidades tecnicas escalaveis. Implementacao de funcionalidades interativas e responsivas, garantindo experiencia fluida. Gerenciamento de banco de dados relacional e otimizacao da estrutura de dados para escalabilidade.",
+            "Desenvolvimento de aplicativo móvel com React Native CLI para Android (versão iOS em fase final). Colaboração com designers e stakeholders para traduzir requisitos de negócio em funcionalidades técnicas escaláveis. Implementação de funcionalidades interativas e responsivas, garantindo experiência fluida. Gerenciamento de banco de dados relacional e otimização da estrutura de dados para escalabilidade.",
         },
         {
           title: "iJunior - Desenvolvedor Back-end",
           period: "Nov 2021 - Abr 2023",
           description:
-            "Atuacao no desenvolvimento back-end de aplicacoes web e testes unitarios, utilizando JavaScript, NodeJS, Redis, SCRUM e Gitflow. Participacao em mais de cinco projetos de sucesso, aperfeicoando trabalho em equipe, proatividade e relacionamento com clientes. Participacao na diretoria de marketing, buscando solucoes inovadoras para melhores resultados.",
+            "Atuação no desenvolvimento back-end de aplicações web e testes unitários, utilizando JavaScript, NodeJS, Redis, SCRUM e Gitflow. Participação em mais de cinco projetos de sucesso, aperfeiçoando trabalho em equipe, proatividade e relacionamento com clientes. Participação na diretoria de marketing, buscando soluções inovadoras para melhores resultados.",
         },
       ],
     },
     contact: {
       eyebrow: "Contato",
-      title: "Se voce quer construir algo forte, vamos conversar.",
+      title: "Se você quer construir algo forte, vamos conversar.",
       intro:
-        "Estou aberto a oportunidades em produto, engenharia de software e projetos em que performance, escala e boa experiencia importem.",
+        "Estou aberto a oportunidades em produto, engenharia de software e projetos em que performance, escala e boa experiência importem.",
       labels: {
         email: "Email",
         phone: "Telefone",
@@ -270,12 +270,12 @@ export const content = {
         sendingStatus: "Enviando mensagem...",
         successStatus: "Mensagem enviada com sucesso. Vou retornar em breve.",
         errorStatus:
-          "Nao foi possivel enviar agora. Tente novamente em instantes.",
-        subject: "Novo contato pelo portfolio",
+          "Não foi possível enviar agora. Tente novamente em instantes.",
+        subject: "Novo contato pelo portfólio",
       },
     },
     footer: {
-      copy: "2026 Rafael Camacho. Engenharia, produto e execucao.",
+      copy: "2026 Rafael Camacho. Engenharia, produto e execução.",
     },
   },
   en: {
@@ -298,7 +298,7 @@ export const content = {
       profileAlt: "Rafael Camacho",
       metrics: [
         { value: "+3", label: "years building software" },
-        { value: "Full-Stack", label: "web, mobile and integrations" },
+        { value: "Full-Stack", label: "web, mobile, and integrations" },
         { value: "UFMG", label: "Systems Engineering" },
       ],
     },
@@ -310,7 +310,7 @@ export const content = {
       storyOne:
         "Since early on, I have been driven by technology and by how well-built software transforms routines, businesses, and decisions. I like combining practical implementation, systems thinking, and visual taste to deliver stronger and more memorable products.",
       storyTwo:
-        "I currently study Systems Engineering at UFMG, where I deepened my foundation in algorithms, data structures, computational logic, and software engineering. This complements my work with web and mobile applications, plus integrated market workflows.",
+        "I currently study Systems Engineering at UFMG, where I deepened my foundation in algorithms, data structures, computational logic, and software engineering. This complements my work with web and mobile applications, as well as integrated workflows in real-world settings.",
       panelTitle: "Current focus",
       highlights: [
         "Scalable application architecture",
@@ -450,7 +450,7 @@ export const content = {
           status: "Live",
           period: "2024-2025",
           description:
-            "Complete web platform for course and student management, built with React, Nest.js, and SQL. Project delivered at Pec Tec with focus on scalability and data-driven solutions.",
+            "Complete web platform for course and student management, built with React, Nest.js, and SQL. Project delivered at Pec Tec, with a focus on scalability and data-driven solutions.",
           modalText:
             "LMS platform with admin dashboards, enrollments, and learning tracks. I worked on front-end and API integration to ensure performance, security, and scalability.",
           images: ["/images/projects/lms-projeto-desenvolve/login-screen.png"],
@@ -496,7 +496,7 @@ export const content = {
           title: "LEVTY - Software Engineer",
           period: "May 2025 - Present",
           description:
-            "Worked on BPMN process development using modeling tools. Programmed and automated workflow flows in JavaScript, focused on system integration and process optimization. Participated in agile ceremonies (Scrum) and used practices such as Kanban for task management. Collaborated on system modeling, requirements gathering, functional testing, and architectural decisions for scalable solutions.",
+            "Worked on BPMN process development using modeling tools. Programmed and automated workflows in JavaScript, with a focus on system integration and process optimization. Participated in agile ceremonies (Scrum) and used Kanban for task management. Collaborated on system modeling, requirements gathering, functional testing, and architectural decisions for scalable solutions.",
         },
         {
           title: "Pec Tec - Junior Full-Stack Developer",
@@ -520,7 +520,7 @@ export const content = {
           title: "iJunior - Back-end Developer",
           period: "Nov 2021 - Apr 2023",
           description:
-            "Worked on back-end web applications and unit testing, using JavaScript, NodeJS, Redis, SCRUM, and Gitflow. Contributed to more than five successful projects, improving teamwork, proactivity, and client communication. Also participated in the marketing board, seeking innovative solutions for better results.",
+            "Worked on back-end web applications and unit testing, using JavaScript, Node.js, Redis, Scrum, and Gitflow. Contributed to more than five successful projects, improving teamwork, proactivity, and client communication. Also participated in the marketing team, seeking innovative solutions for better results.",
         },
       ],
     },
