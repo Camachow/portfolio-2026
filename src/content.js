@@ -229,6 +229,25 @@ export const content = {
           images: ["/images/projects/ax37/first-view.png"],
           projectUrl: "https://ax37-landing-page.vercel.app",
         },
+        {
+          title: "Terra Cor Brasil",
+          category: "Landing Page",
+          quote:
+            "Arte, ciência e pigmentos naturais como ferramentas de autodescoberta.",
+          impact:
+            "Divulgação e promoção de projetos sociais e artísticos com geotintas",
+          status: "No ar",
+          period: "2022-2023",
+          description:
+            "Site institucional que apresenta o projeto Terra Cor Brasil, uma iniciativa que mescla aprendizagem, coletividade e expressão artística através de geotintas. A plataforma organiza informações sobre a missão, trajetória e propostas do projeto para comunidades e espaços culturais.",
+          modalText:
+            "O site Terra Cor Brasil comunica o propósito da instituição, que realiza atividades artísticas e educacionais com foco em autodescoberta e transformação sócio-cultural através de pigmentos minerais. A página apresenta a trajetória do projeto desde 1998, destaca seus pilares (arte, ciência e cultura) e facilita o acesso às redes sociais e informações sobre parcerias. O design reflete a identidade visual do projeto, com ênfase em cores naturais e na exploração das infinitas possibilidades das geotintas.",
+          images: [
+            "/images/projects/terra-cor-brasil/first-view.png",
+            "https://terracorbrasil.com.br/wp-content/uploads/2023/01/Foto-Perfil-FB-Nome-1.png",
+          ],
+          projectUrl: "https://terracorbrasil.com.br",
+        },
       ],
     },
     experience: {
@@ -494,8 +513,28 @@ export const content = {
             "Participation in an open-source project, improving features in the OpenEdx distance learning platform. It included building new modules and fixing bugs in collaboration with the community.",
           modalText:
             "Contributions in modules and core fixes for OpenEdx, focused on usability and stability. The work involved PR reviews and alignment with the community.",
-          images: ["/images/foto-perfil.png"],
+          images: [
+            "https://openedx.org/wp-content/uploads/2025/08/openedx-logo-2026.svg",
+          ],
           projectUrl: "https://openedx.org",
+          githubUrl: "https://github.com/openedx",
+        },
+        {
+          title: "Organo",
+          category: "Web App",
+          quote: "Visual team organization with dynamic card creation.",
+          impact: "Structures teams and collaborators in a simple, clear flow",
+          status: "Live",
+          period: "2022",
+          description:
+            "React web app for creating collaborator cards, organizing teams, and building a clear visual structure with a simple workflow. The project emphasizes dynamic content creation and a straightforward interface for educational or internal use.",
+          modalText:
+            "Organo centralizes collaborator card creation and team management in an objective visual experience. I shaped the information layout to make input fast, organization intuitive, and navigation easy to use.",
+          images: [
+            "https://organo-three-cyan.vercel.app/imagens/banner.png",
+            "https://organo-three-cyan.vercel.app/imagens/logo.png",
+          ],
+          projectUrl: "https://organo-three-cyan.vercel.app/",
         },
         {
           title: "AX37 Marketing Events",
@@ -512,21 +551,23 @@ export const content = {
           projectUrl: "https://ax37-landing-page.vercel.app",
         },
         {
-          title: "Organo",
-          category: "Web App",
-          quote: "Visual team organization with dynamic card creation.",
-          impact: "Structures teams and collaborators in a simple, clear flow",
+          title: "Terra Cor Brasil",
+          category: "Landing Page",
+          quote:
+            "Art, science, and natural pigments as tools for self-discovery.",
+          impact:
+            "Promotion and dissemination of social and artistic projects with geotints",
           status: "Live",
-          period: "2026",
+          period: "2022-2023",
           description:
-            "React web app for creating collaborator cards, organizing teams, and building a clear visual structure with a simple workflow. The project emphasizes dynamic content creation and a straightforward interface for educational or internal use.",
+            "Institutional website featuring Terra Cor Brasil, an initiative that blends learning, community, and artistic expression through geotints and mineral pigments. The platform organizes information about the project's mission, trajectory, and community-oriented proposals.",
           modalText:
-            "Organo centralizes collaborator card creation and team management in an objective visual experience. I shaped the information layout to make input fast, organization intuitive, and navigation easy to use.",
+            "The Terra Cor Brasil website communicates the institution's purpose of conducting artistic and educational activities focused on self-discovery and socio-cultural transformation through mineral pigments. The page presents the project's trajectory since 1998, highlights its pillars (art, science, and culture), and facilitates access to social media and partnership information. The design reflects the project's visual identity, emphasizing natural colors and the infinite possibilities of geotints.",
           images: [
-            "https://organo-three-cyan.vercel.app/imagens/banner.png",
-            "https://organo-three-cyan.vercel.app/imagens/logo.png",
+            "/images/projects/terra-cor-brasil/first-view.png",
+            "https://terracorbrasil.com.br/wp-content/uploads/2023/01/Foto-Perfil-FB-Nome-1.png",
           ],
-          projectUrl: "https://organo-three-cyan.vercel.app/",
+          projectUrl: "https://terracorbrasil.com.br",
         },
       ],
     },
