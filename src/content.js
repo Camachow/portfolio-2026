@@ -131,7 +131,7 @@ export const content = {
       statusLabel: "Status",
       periodLabel: "Ano",
       highlights: [
-        { value: "3", label: "cases principais" },
+        { value: "5", label: "cases principais" },
         { value: "2", label: "produtos em produção" },
         { value: "1", label: "projeto open source ativo" },
       ],
@@ -191,6 +191,23 @@ export const content = {
             "https://openedx.org/wp-content/uploads/2025/08/openedx-logo-2026.svg",
           ],
           projectUrl: "https://openedx.org",
+        },
+        {
+          title: "Organo",
+          category: "Web App",
+          quote: "Organização visual de equipes com criação dinâmica de cards.",
+          impact: "Estrutura times e colaboradores de forma simples e clara",
+          status: "No ar",
+          period: "2022",
+          description:
+            "Aplicação web em React para cadastrar colaboradores, organizar times e montar cards com foco em clareza visual e fluxo simples. O projeto destaca a criação dinâmica de conteúdo e uma interface direta para uso em contexto educacional ou interno.",
+          modalText:
+            "O Organo centraliza a criação de cards de colaboradores e a gestão de times em uma experiência visual objetiva. Trabalhei a apresentação das informações para tornar o cadastro rápido, a organização intuitiva e a navegação fácil de usar.",
+          images: [
+            "https://organo-three-cyan.vercel.app/imagens/banner.png",
+            "https://organo-three-cyan.vercel.app/imagens/logo.png",
+          ],
+          projectUrl: "https://organo-three-cyan.vercel.app/",
         },
         {
           title: "AX37 Marketing Eventos",
@@ -411,7 +428,7 @@ export const content = {
       statusLabel: "Status",
       periodLabel: "Year",
       highlights: [
-        { value: "3", label: "main case studies" },
+        { value: "5", label: "main case studies" },
         { value: "2", label: "products in production" },
         { value: "1", label: "active open-source project" },
       ],
@@ -483,6 +500,23 @@ export const content = {
             "The page positions AX37 around authority and conversion, grouping content into hero, services, products, and quick contact via WhatsApp, email, and quote requests. The site showcases event formats such as promotional blitzes, corporate events, seminars, symposiums, fairs, roadshows, workshops, congresses, training programs, business conventions, online events, and hybrid events. On the product side, it highlights access portals and facades, stands, kiosks, parklet decks, meeting points, instagrammable scenes, custom containers, outdoor media, POS displays, event furniture, promotional materials, and complete event solutions.",
           images: ["/images/projects/ax37/first-view.png"],
           projectUrl: "https://ax37-landing-page.vercel.app",
+        },
+        {
+          title: "Organo",
+          category: "Web App",
+          quote: "Visual team organization with dynamic card creation.",
+          impact: "Structures teams and collaborators in a simple, clear flow",
+          status: "Live",
+          period: "2026",
+          description:
+            "React web app for creating collaborator cards, organizing teams, and building a clear visual structure with a simple workflow. The project emphasizes dynamic content creation and a straightforward interface for educational or internal use.",
+          modalText:
+            "Organo centralizes collaborator card creation and team management in an objective visual experience. I shaped the information layout to make input fast, organization intuitive, and navigation easy to use.",
+          images: [
+            "https://organo-three-cyan.vercel.app/imagens/banner.png",
+            "https://organo-three-cyan.vercel.app/imagens/logo.png",
+          ],
+          projectUrl: "https://organo-three-cyan.vercel.app/",
         },
       ],
     },
